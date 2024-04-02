@@ -79,7 +79,18 @@ const generateUid = function() {
 
 // adds a track to the library
 const addTrack = function(name, artist, album) {
+       const generateUid = function() {
+              return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+            }
+       const newTrack = {
+              name: name,
+              artist: artist,
+              album: album
+       }
 
+       let uId = generateUid();
+       library.tracks[uId] = newTrack;
+       newTrack.id = uId;
 }
 
 
@@ -102,3 +113,4 @@ const printSearchResults = function(query) {
 // printTracks();
 // printPlaylist('p01');
 // addTrackToPlaylist('t01', 'p02');
+// addTrack('Song 4', 'Artist 4', 'Album 4');
