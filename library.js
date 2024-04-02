@@ -82,21 +82,31 @@ const addTrack = function(name, artist, album) {
        const generateUid = function() {
               return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
             }
-       const newTrack = {
+       const newPlaylist = {
               name: name,
               artist: artist,
               album: album
        }
 
        let uId = generateUid();
-       library.tracks[uId] = newTrack;
-       newTrack.id = uId;
+       library.tracks[uId] = newPlaylist;
+       newPlaylist.id = uId;
 }
 
 
 // adds a playlist to the library
 const addPlaylist = function(name) {
+       const generateUid = function() {
+              return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+            }
+       const newPlaylist = {
+              name: name,
+              tracks: ['t01', 't02', 't03']
+       }
 
+       let uId = generateUid();
+       library.playlists[uId] = newPlaylist;
+       newPlaylist.id = uId;
 }
 
 
@@ -109,8 +119,9 @@ const printSearchResults = function(query) {
 
 }
 
-// printPlaylists();
-// printTracks();
-// printPlaylist('p01');
-// addTrackToPlaylist('t01', 'p02');
-// addTrack('Song 4', 'Artist 4', 'Album 4');
+printPlaylists();
+printTracks();
+printPlaylist('p01');
+addTrackToPlaylist('t01', 'p02');
+addTrack('Song 4', 'Artist 4', 'Album 4');
+addPlaylist('Studying');
