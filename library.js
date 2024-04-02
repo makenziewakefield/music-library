@@ -65,7 +65,8 @@ const printPlaylist = function(playlistId) {
 
 // adds an existing track to an existing playlist
 const addTrackToPlaylist = function(trackId, playlistId) {
-
+       //adding track 1 (library.tracks.t01.id) to playlist 2 (library.playlist.p02.tracks)
+       library.playlists[playlistId].tracks.push(trackId);
 }
 
 
@@ -99,4 +100,5 @@ const printSearchResults = function(query) {
 
 // printPlaylists();
 // printTracks();
-printPlaylist('p01');
+// printPlaylist('p01');
+// addTrackToPlaylist('t01', 'p02');
