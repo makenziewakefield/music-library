@@ -31,11 +31,11 @@ const library = {
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
 const printPlaylists = function() {
-       let plTracks1 = library.playlists.p01.tracks.length;
-       let plTracks2 = library.playlists.p02.tracks.length;
-       console.log(`${library.playlists.p01.id}: ${library.playlists.p01.name} - ${plTracks1} tracks`);
-       console.log(`${library.playlists.p02.id}: ${library.playlists.p02.name} - ${plTracks2} tracks`);
+       console.log(`${library.playlists.p01.id}: ${library.playlists.p01.name} - ${library.playlists.p01.tracks.length} tracks`);
+       console.log(`${library.playlists.p02.id}: ${library.playlists.p02.name} - ${library.playlists.p02.tracks.length} tracks`);
 }
+
+printPlaylists();
 
 
 // prints a list of all tracks, using the following format:
@@ -119,9 +119,9 @@ const printSearchResults = function(query) {
 
 }
 
-printPlaylists();
-printTracks();
-printPlaylist('p01');
-addTrackToPlaylist('t01', 'p02');
-addTrack('Song 4', 'Artist 4', 'Album 4');
-addPlaylist('Studying');
+// printPlaylists();
+// // printTracks();
+// // printPlaylist('p01');
+// // addTrackToPlaylist('t01', 'p02');
+// // addTrack('Song 4', 'Artist 4', 'Album 4');
+// // addPlaylist('Studying');
